@@ -10,8 +10,16 @@ export const storeQuery = (newQuery) => ({
     query: newQuery
 })
 
-// export const STORE_DATA = 'STORE_DATA';
-// export const storeData = (newData) => ({
-//     type: STORE_DATA,
-//     data: newData
+export const STORE_DATA = 'STORE_DATA';
+export const storeData = (newData) => ({
+    type: STORE_DATA,
+    data: newData
+})
+
+// export const STORE_TITLE = 'STORE_TITLE';
+// export const storeTitle = (newTitle) => ({
+//     type: STORE_TITLE,
+//     title: newTitle
 // })
+
+

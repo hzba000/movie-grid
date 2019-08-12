@@ -2,6 +2,9 @@ import React from 'react';
 
 import {connect} from 'react-redux';
 
+import {storeData} from '../actions'
+
+
 export class SearchBar extends React.Component{
     constructor(props){
         super(props)
@@ -33,7 +36,8 @@ export class SearchBar extends React.Component{
 };
 
 const mapStateToProps = state => ({
-    query:state.query
+    query:state.query,
+    data: state.data
 });
 
 export default connect(mapStateToProps)(SearchBar);
