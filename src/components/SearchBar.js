@@ -2,14 +2,11 @@ import React from 'react';
 
 import {connect} from 'react-redux';
 
-import {storeData} from '../actions'
-
-
 export class SearchBar extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            query: null,
+            // query: null,
         };
         this.onSubmitNewQuery = this.onSubmitNewQuery.bind(this);
     };
@@ -18,7 +15,7 @@ export class SearchBar extends React.Component{
         event.preventDefault();
         let newQuery = this.query.value;
         this.query.value = '';
-        this.setState({query:newQuery});
+        // this.setState({query:newQuery});
         this.props.storeQuery(newQuery)
     };
 

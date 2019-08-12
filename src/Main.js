@@ -3,47 +3,23 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {connect} from 'react-redux';
 
 import Homepage from './components/Homepage'
-import Results from './components/Results'
 
-// import Component from './components/Component'
 import {storeQuery} from './actions'
 import {storeData} from './actions'
 
-
-
-
 import {test} from './actions'
-// let dataArray = [];
 
 
 export class Main extends React.Component{
     constructor(props){
         super(props);
-        this.state = {
-            data:null,
-        };
-        this.changeMonkey = this.changeMonkey.bind(this);
-        this.checkQuery = this.checkQuery.bind(this);
-        this.checkData = this.checkData.bind(this);
+        this.state = {};
         this.storeQuery = this.storeQuery.bind(this);
         this.getMovieData = this.getMovieData.bind(this);
     }
 
     componentDidMount(){
         this.props.dispatch(test("monkey"));
-    }
-
-    changeMonkey(){
-        console.log(this.props.test)
-    }
-
-    checkQuery(){
-        console.log(this.props.query)
-    }
-
-    checkData(){
-        console.log(this.props.data)
-
     }
 
     storeQuery(newQuery){
@@ -68,33 +44,10 @@ export class Main extends React.Component{
           console.log(dataArray);
           this.props.dispatch(storeData(dataArray))
         })
-        // this.props.dispatch(storeData(dataArray))
-        // this.setState({data:this.props.data})
-        // console.log(this.props.data)
     }
     
     render(){
-        // if(this.props.data === null){
-        //     return(
-        //         <div>
-        //         <button onClick={this.getMovieData}> Test of Main </button>
-        //         <button onClick={this.checkQuery}> Check Query </button>
-        //         <button onClick={this.checkData}> Check Data </button>
-        //         <Homepage storeQuery={this.storeQuery}/>
-        //         </div>
-        //     )
-        // }
-        // return(
-        //     <div>
-        //     <button onClick={this.getMovieData}> Test of Main </button>
-        //     <button onClick={this.checkQuery}> Check Query </button>
-        //     <button onClick={this.checkData}> Check Data </button>
-        //     <Homepage storeQuery={this.storeQuery}/>
-        //     <Results />
-        //     </div>
-        // )
-        let display = (this.props.data)?<div><Homepage storeQuery={this.storeQuery}/><Results/></div>:<Homepage storeQuery={this.storeQuery}/>
-        return display;
+        return <Homepage storeQuery={this.storeQuery}/>
     }
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import './Results.css';
 
 
 
@@ -16,13 +17,15 @@ export class Homepage extends React.Component{
 
     render(){
         if(this.props.data === null){
-           return <div>Type something</div>
+           return(
+            <div></div>
+           )
         }
 
         if(this.props.data.length >= 1){
             let formatResults = this.props.data.map((entry, index)=>{return <p key={index}>{this.props.data[index].title}</p>})
             return(
-                <div className="homepage-base">
+                <div className="results-base">
                 {formatResults}
                 </div>
             );

@@ -16,10 +16,5 @@ export const storeData = (newData) => ({
     data: newData
 })
 
-// export const STORE_TITLE = 'STORE_TITLE';
-// export const storeTitle = (newTitle) => ({
-//     type: STORE_TITLE,
-//     title: newTitle
-// })
 
 
