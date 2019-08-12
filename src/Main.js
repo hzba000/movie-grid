@@ -13,7 +13,7 @@ import {storeData} from './actions'
 
 
 import {test} from './actions'
-let dataArray = [];
+// let dataArray = [];
 
 
 export class Main extends React.Component{
@@ -54,21 +54,23 @@ export class Main extends React.Component{
     
     getMovieData(newQuery){
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=057dfa32a18eed0f2dc23dc2e80ed8a0&query=${newQuery}`)
-        .then(function(response) {
+        .then(response=> {
           return response.json();
         })
-        .then(function(myJson) {
+        .then(myJson=>{
         //reset our data for each search
+        let dataArray = []
           dataArray.length = 0;
 
           for(let i=0; i<myJson.results.length; i++){
             dataArray.push({"title":myJson.results[i].title,"overview":myJson.results[i].overview,"releasedate":myJson.results[i].release_date})
           }
           console.log(dataArray);
+          this.props.dispatch(storeData(dataArray))
         })
-        this.props.dispatch(storeData(dataArray))
-        this.setState({data:this.props.data})
-        console.log(this.props.data)
+        // this.props.dispatch(storeData(dataArray))
+        // this.setState({data:this.props.data})
+        // console.log(this.props.data)
     }
     
     render(){
@@ -91,8 +93,7 @@ export class Main extends React.Component{
         //     <Results />
         //     </div>
         // )
-        let dataProp = [...dataArray]
-        let display = (this.props.data)?<div><Homepage storeQuery={this.storeQuery}/><Results dataProp={dataProp}/></div>:<Homepage storeQuery={this.storeQuery}/>
+        let display = (this.props.data)?<div><Homepage storeQuery={this.storeQuery}/><Results/></div>:<Homepage storeQuery={this.storeQuery}/>
         return display;
     }
 }

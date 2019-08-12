@@ -5,6 +5,8 @@ import {connect} from 'react-redux';
 import SearchBar from './SearchBar'
 import Results from './Results'
 
+
+
 import './Homepage.css';
 
 export class Homepage extends React.Component{
