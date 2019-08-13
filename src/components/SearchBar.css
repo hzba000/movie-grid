@@ -1,0 +1,15 @@
+.flex-search-holder{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding: 2px 5px;
+    outline:none;
+
+}

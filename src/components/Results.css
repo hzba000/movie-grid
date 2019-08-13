@@ -1,6 +1,33 @@
-.results-base{
-    /* width: 100vw;
-    height: 100vh; */
-    border: 5px black solid;
-    margin-top:10px;
+
+
+.flex-row{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-evenly;
+    margin-bottom:25px;
+    flex-wrap:wrap;
+    border-bottom: 1px black solid;
 }
+
+.summary-box{
+    width:600px;
+}
+
+.title-box{
+    width:200px;
+    text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+    .flex-row{
+        display:block;
+    }
+    .hidden{
+        display:none;
+    }
+
+    .summary-box{
+        width:100%;
+    }
+  }
