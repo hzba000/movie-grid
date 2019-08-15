@@ -6,21 +6,16 @@ import Results from './Results'
 
 import './Homepage.css';
 
-export class Homepage extends React.Component{
-    constructor(props){
-        super(props)
-    };
-
-    render(){
+export function Homepage(props) {
         return(
             <div className="homepage-base">
                 <div>
-                <SearchBar storeQuery={this.props.storeQuery}/>
+                <SearchBar storeQuery={props.storeQuery}/>
                 <Results />
                 </div>
             </div>
         );
-    };
+    
 };
 
 const mapStateToProps = state => ({

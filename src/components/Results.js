@@ -29,7 +29,7 @@ export class Results extends React.Component{
 
             return(
                     <div>
-                        <div className="flex-row hidden">
+                        <div className="flex-row legend hidden">
                             <div className="title-box">Title</div>
                             <div className="date-box">Release Date</div>
                             <div className="summary-box">Summary</div>

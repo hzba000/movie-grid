@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {connect} from 'react-redux';
-import MagGlass from './images/search-magnifying-glass-png.png'
+import MagGlass from './images/magnifying_glass.png'
 
 import './SearchBar.css';
 
