@@ -13,3 +13,16 @@ input[type=text] {
     outline:none;
 
 }
+
+.button-image{
+    height: 25px;
+    width:25px;
+    background-color:white;
+    outline:none;
+    border:none;
+}
+
+input[type="button"]:focus{
+    outline:none;
+    background-color:white;
+}

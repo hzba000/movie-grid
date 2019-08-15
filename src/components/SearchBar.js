@@ -1,10 +1,10 @@
 import React from 'react';
 
 import {connect} from 'react-redux';
+import MagGlass from './images/search-magnifying-glass-png.png'
 
 import './SearchBar.css';
 
-import MagGlass from './images/magnifying_glass.png'
 
 
 export class SearchBar extends React.Component{
@@ -29,9 +29,9 @@ export class SearchBar extends React.Component{
                 <div className="flex-search-holder">
                     <div className="welcome-holder"> Movies for Jeff!!</div>
                     <div className="search-holder">
-                        <form action="#" onSubmit={this.onSubmitNewQuery}>
+                        <form className="search-form" action="#" onSubmit={this.onSubmitNewQuery}>
                             <label htmlFor="newQueryForm"></label>
-                            <button type="image"> Submit </button>
+                            <button type="image" className="search-button"><img src={MagGlass} alt="magnifer" className="button-image"/></button>
                             <input type="text" name="newQueryForm" id="newQueryForm" ref={input => this.query = input}/>
                         </form>  
                     </div>

@@ -4,9 +4,8 @@ import './Results.css';
 
 
 
-import './Homepage.css';
 
-export class Homepage extends React.Component{
+export class Results extends React.Component{
     constructor(props){
         super(props)
         this.state={
@@ -16,7 +15,7 @@ export class Homepage extends React.Component{
 
 
     render(){
-        if(this.props.data === null){
+        if(this.props.data === null || undefined){
            return(
             <div></div>
            )
@@ -47,10 +46,11 @@ export class Homepage extends React.Component{
 
     };
 };
+Results.defaultProps = {data:[{},{},{}]}
 
 const mapStateToProps = state => ({
     query: state.query,
     data: state.data
 });
 
-export default connect(mapStateToProps)(Homepage);
+export default connect(mapStateToProps)(Results);
