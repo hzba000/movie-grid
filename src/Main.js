@@ -38,9 +38,9 @@ export class Main extends React.Component{
           }
           else{
             for(let i=0; i<myJson.results.length; i++){
-                dataArray.push({"title":myJson.results[i].title,"overview":myJson.results[i].overview,"releasedate":myJson.results[i].release_date})
+                dataArray.push({"title":myJson.results[i].title,"overview":myJson.results[i].overview,"releasedate":myJson.results[i].release_date, "backdrop":myJson.results[i].backdrop_path, "poster":myJson.results[i].poster_path})
               }
-              console.log(dataArray);
+            //   console.log(dataArray);
               this.props.dispatch(storeData(dataArray))
           }
         })

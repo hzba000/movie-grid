@@ -4,17 +4,28 @@ import {connect} from 'react-redux';
 import SearchBar from './SearchBar'
 import Results from './Results'
 
+
+
 import './Homepage.css';
 
-export function Homepage(props) {
+export class Homepage extends React.Component() {
+    constructor(props){
+        super(props)
+        this.state={}
+        this.setName = this.setName.bind(this)
+    }
+
+    render(){
         return(
             <div className="homepage-base">
                 <div>
-                <SearchBar storeQuery={props.storeQuery}/>
+                <SearchBar storeQuery={this.props.storeQuery}/>
                 <Results />
                 </div>
             </div>
         );
+    }
+
     
 };
 

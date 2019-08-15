@@ -25,16 +25,16 @@ export class Results extends React.Component{
             // let formatSummary = this.props.data.map((entry, index)=>{return <div class="ind-results-flex-container"key={index}>{this.props.data[index].overview}</div>})
             // let formatTitle = this.props.data.map((entry, index)=>{return <div class="ind-results-flex-container"key={index}>{this.props.data[index].title}</div>})
             // let formatDate= this.props.data.map((entry, index)=>{return <div class="ind-results-flex-container"key={index}>{this.props.data[index].releasedate}</div>})
-            let formatData = this.props.data.map((entry, index)=>{return <div className="flex-row" key={index + "container"}><div className="title-box" key={index+"title"}>{this.props.data[index].title}</div><div className="date-box" key={index+"date"}>{this.props.data[index].releasedate}</div><div className="summary-box" key={index + "summary"}>{this.props.data[index].overview}</div></div>})
+            let formatData = this.props.data.map((entry, index)=>{return <div className="flex-row" style ={ { backgroundImage: `url(https://image.tmdb.org/t/p/original/${this.props.data[index].backdrop})`,backgroundSize: 'cover',backgroundColor:`rgba(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.random()*1})`} } key={index + "container"}><div className="title-box" key={index+"title"}>{this.props.data[index].title}</div><div className="date-box" key={index+"date"}>{this.props.data[index].releasedate}</div><div className="summary-box" key={index + "summary"}>{this.props.data[index].overview}</div></div>})
 
             return(
                     <div>
                         <div className="flex-row legend hidden">
-                            <div className="title-box">Title</div>
-                            <div className="date-box">Release Date</div>
-                            <div className="summary-box">Summary</div>
+                            <div className="title-box title-box-legend">Title</div>
+                            <div className="date-box date-box-legend">Release Date</div>
+                            <div className="summary-box summary-box-legend">Summary</div>
                         </div>
-                        <div>{formatData}</div>
+                        <div className="data-wrapper">{formatData}</div>
                     </div>
 
             );

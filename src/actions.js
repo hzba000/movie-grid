@@ -16,5 +16,12 @@ export const storeData = (newData) => ({
     data: newData
 })
 
+export const SET_NAME = 'SET_NAME';
+export const setName = (newName) => ({
+    type: SET_NAME,
+    name: newName
+})
+
+
 
 
