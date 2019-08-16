@@ -5,7 +5,7 @@
     justify-content:space-evenly;
     flex-wrap:wrap;
     border-bottom: 10px black solid;
-    padding:20px;
+    padding:17px;
 }
 
 .flex-row:last-child, .flex-row:first-child{
@@ -61,6 +61,8 @@
     .summary-box{
         width:100%;
     }
+
+
 }
 
 

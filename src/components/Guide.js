@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {setName} from '../actions'
 import Camera from './images/camera.png'
+import Ticket from './images/ticket.png'
 
 import './Guide.css';
 
@@ -17,11 +18,12 @@ export class Guide extends React.Component{
 
         render(){
             return(
-                <div class="landing-information-holder">
-                    <div class="landing-image-holder" alt="landing"></div>
-                        <div class="landing-information">
-                            <img src={Camera} alt="landing" />
-                            <h2>{this.props.name} is a tool to let you search for movies, release dates and summaries</h2>
+                <div className="landing-information-holder">
+                    <div className="landing-image-holder" alt="landing"></div>
+                        <div className="landing-information">
+                            <h2>{this.props.name} </h2>
+                            <img class="guide-image" src={Ticket} alt="ticket" />
+                            <h3> Search for movies, release dates and summaries </h3>
                         </div>
                     </div>
             )

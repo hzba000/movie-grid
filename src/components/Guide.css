@@ -21,7 +21,7 @@
 }
 
 .landing-information-holder{
-    background-color: white;
+    background-color: black;
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
@@ -31,6 +31,18 @@
     text-align:center;
     /* animation: slide-up 5s ease */
     
+}
+
+.landing-information{
+    background-color:black;
+    height: 100vh;
+    color:white;
+    /* padding:60px; */
+    text-align:center;
+}
+
+.guide-image{
+    height:300px;
 }
 
 @keyframes slide-up {
