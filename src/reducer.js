@@ -1,11 +1,13 @@
 import {TEST} from './actions';
 import {STORE_QUERY} from './actions'
 import {STORE_DATA} from './actions'
+import {SET_NAME} from './actions'
 
 const initialState = {
     test: null,
-    query: null,
+    query: "Why not try 'ninja'?",
     data: null,
+    name: "Really lame Title"
 };
 
 export default(state=initialState, action) => {
@@ -25,6 +27,12 @@ export default(state=initialState, action) => {
     if (action.type === STORE_DATA){
         return Object.assign({}, state, {
             data: action.data,
+        });
+    }
+
+    if (action.type === SET_NAME){
+        return Object.assign({}, state, {
+            name: action.name,
         });
     }
 

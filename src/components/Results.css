@@ -5,10 +5,14 @@
     flex-direction:row;
     align-items:center;
     justify-content:space-evenly;
-    margin-bottom:25px;
+    /* margin-bottom:25px; */
     flex-wrap:wrap;
-    border-bottom: 1px black solid;
+    border-bottom: 10px black solid;
     padding:20px;
+}
+
+.flex-row:last-child, .flex-row:first-child{
+    margin-bottom:0;
 }
 
 .summary-box{
@@ -18,11 +22,26 @@
 
 .title-box, .summary-box, .date-box{
     margin-bottom:25px;
+    border-radius:25px;
+    background-color:white;
+    font-size:20px;
+    padding: 20px;
+    text-align: center;
+    border: 2px black;
+    border-style: dotted dashed solid double;
+    font-family: 'Kanit', sans-serif;
+
+}
+
+.title-box-legend, .date-box-legend, .summary-box-legend{
+    border:5px black inset;
+    font-size: x-large;
+    font-weight:bold;
+    border-radius:0;
 }
 
 .title-box{
     width:200px;
-    text-align: left;
 }
 
 @media only screen and (max-width: 1000px) {
