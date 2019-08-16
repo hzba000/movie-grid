@@ -13,8 +13,13 @@
 
 .flex-row:last-child, .flex-row:first-child{
     margin-bottom:0;
+
 }
 
+.flex-row > *{
+    animation: slide-up 5s ease;
+
+}
 .summary-box{
     width:600px;
     /* margin-top:20px; */
@@ -61,3 +66,17 @@
         width:100%;
     }
   }
+
+
+  @keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+
+  

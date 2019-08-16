@@ -38,7 +38,10 @@ export class SearchBar extends React.Component{
 
     setName(){
         let newName = prompt("Enter a new Title")
-        this.props.dispatch(setName(newName));
+        if(newName !== null && newName !== undefined && newName !==""){
+            this.props.dispatch(setName(newName));
+        }
+
     }
 
     render(){
