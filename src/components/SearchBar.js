@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import MagGlass from './images/magnifying_glass.png'
 
-
+import {setName} from '../actions'
 import './SearchBar.css';
 
 
@@ -16,6 +16,7 @@ export class SearchBar extends React.Component{
         };
         this.onSubmitNewQuery = this.onSubmitNewQuery.bind(this);
         this.scrollTop = this.scrollTop.bind(this);
+        this.setName=this.setName.bind(this);
     };
 
     onSubmitNewQuery(event){
@@ -35,10 +36,15 @@ export class SearchBar extends React.Component{
           });
     }
 
+    setName(){
+        let newName = prompt("Enter a new Title")
+        this.props.dispatch(setName(newName));
+    }
+
     render(){
             return(
                 <div className="flex-search-holder">
-                    <div className="welcome-holder"> {this.props.name}</div>
+                    <div className="welcome-holder" onClick={this.setName}> {this.props.name}</div>
                     <div className="search-holder">
                         <form className="search-form" action="#" onSubmit={this.onSubmitNewQuery}>
                             <label htmlFor="newQueryForm"></label>

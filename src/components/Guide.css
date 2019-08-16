@@ -107,3 +107,17 @@
         margin-top: 6px; 
     } 
 }
+
+.landing-information-holder{
+    background-color: white;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items:center;
+    height: 400px;
+    text-align:center;
+
+    
+}
+

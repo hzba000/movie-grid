@@ -27,7 +27,12 @@ export class Main extends React.Component{
     getMovieData(newQuery){
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${newQuery}`)
         .then(response=> {
-          return response.json();
+            if(response){
+                return response.json();
+            }
+            else{
+                return Error;
+            }
         })
         .then(myJson=>{
         //reset our data for each search
@@ -38,7 +43,7 @@ export class Main extends React.Component{
           }
           else{
             for(let i=0; i<myJson.results.length; i++){
-                dataArray.push({"title":myJson.results[i].title,"overview":myJson.results[i].overview,"releasedate":myJson.results[i].release_date, "backdrop":myJson.results[i].backdrop_path, "poster":myJson.results[i].poster_path})
+                dataArray.push({"title":myJson.results[i].title||"Title not available","overview":myJson.results[i].overview||"Summary not available","releasedate":myJson.results[i].release_date||"Date not available", "backdrop":myJson.results[i].backdrop_path, "poster":myJson.results[i].poster_path})
               }
             //   console.log(dataArray);
               this.props.dispatch(storeData(dataArray))

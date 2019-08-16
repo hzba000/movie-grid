@@ -7,7 +7,7 @@ const initialState = {
     test: null,
     query: "Why not try 'ninja'?",
     data: null,
-    name: "Really lame Title"
+    name: "Movie-Grid"
 };
 
 export default(state=initialState, action) => {

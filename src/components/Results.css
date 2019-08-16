@@ -38,10 +38,15 @@
     font-size: x-large;
     font-weight:bold;
     border-radius:0;
+    border-color:inherit;
 }
 
 .title-box{
     width:200px;
+}
+
+#nothing-found-text{
+    color:white;
 }
 
 @media only screen and (max-width: 1000px) {

@@ -40,7 +40,7 @@ export class Results extends React.Component{
         }
 
         else {
-            return <div>Sorry, we didn't find anything. Try another search!</div>
+            return <div id="nothing-found-text">Sorry, we didn't find anything. Try another search!</div>
         }
 
     };
