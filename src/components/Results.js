@@ -24,7 +24,7 @@ export class Results extends React.Component{
         if(this.props.data.length >= 1){
             // let formatSummary = this.props.data.map((entry, index)=>{return <div class="ind-results-flex-container"key={index}>{this.props.data[index].overview}</div>})
             // let formatTitle = this.props.data.map((entry, index)=>{return <div class="ind-results-flex-container"key={index}>{this.props.data[index].title}</div>})
-            // let formatDate= this.props.data.map((entry, index)=>{return <div class="ind-results-flex-container"key={index}>{this.props.data[index].releasedate}</div>})
+            // jlet formatDate= this.props.data.map((entry, index)=>{return <div class="ind-results-flex-container"key={index}>{this.props.data[index].releasedate}</div>})
             let formatData = this.props.data.map((entry, index)=>{return <div className="flex-row" key={index + "container"}><div className="title-box" key={index+"title"}>{this.props.data[index].title}</div><div className="date-box" key={index+"date"}>{this.props.data[index].releasedate}</div><div className="summary-box" key={index + "summary"}>{this.props.data[index].overview}</div></div>})
 
             return(
