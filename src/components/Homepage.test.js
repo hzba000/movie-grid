@@ -4,8 +4,8 @@ import {shallow, configure} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import {Homepage} from './Homepage';
-configure({adapter: new Adapter()});
 
+configure({adapter: new Adapter()});
 
 describe('<Homepage />', () => {
 

@@ -1,10 +1,9 @@
 import React from 'react';
-
 import {connect} from 'react-redux';
-import MagGlass from './images/magnifying_glass.png'
-
 import {setName} from '../actions'
 import './SearchBar.css';
+import MagGlass from './images/magnifying_glass.png'
+
 
 export class SearchBar extends React.Component{
     constructor(props){
