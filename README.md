@@ -12,16 +12,16 @@ BONUS POINTS - Make the UI more attractive
 <img src="./screenshots/original_mvp.png" />
 
 <h2> Guiding Page </h2>
-<img src="#" />
+<img src="./screenshots/movie-grid-screenshot-3.png" />
 
 <h2> Results Page </h2>
-<img src="#" />
+<img src="./screenshots/movie-grid-screenshot.png" />
 
 <h2> Live link </h2>
-<a href=""> Live link </a>
+<a href="https://hzba000.github.io/movie-grid/"> Live link </a>
 
 <h2> Repo Link </h2>
-<a href=""> Repo link </a>
+<a href="https://github.com/hzba000/movie-grid"> Repo link </a>
 
 <h2>Local Installation</h2>
 <ul>
