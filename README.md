@@ -40,7 +40,7 @@
 
 <h2> Known Issues and Things to Do </h2>
 <p>Some cosmetic CSS changes need to be made to make sure the app is fully responsive and aligned</p>
-<p>There are compatibility issues with internet explorer</p>
+<p>Accessibility Issues may need to be addressed</p>
 <p>There are compatibility issues with internet explorer/edge</p>
 <p>Need to test on Safari</p>
 <p>Need to work on adding more tests</p>
