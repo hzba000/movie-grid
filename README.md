@@ -11,7 +11,8 @@
   <li> Clone repo to a local directory </li>
   <li> Open a terminal and navigate to the repo </li>
   <li> Open the project folder in a code editor</li>
-  <li> Add a .env file to the root directory and supply it with "API_KEY=057dfa32a18eed0f2dc23dc2e80ed8a0" </li>
+  <li> Get an API key from <a href="http://api.themoviedb.org">API Source</a>
+  <li> Add a .env file to the root directory and supply it with "API_KEY=YOUR_KEY" </li>
   <li> Type 'npm run start' in the terminal to launch the project in your browser</li>
 </ul>
 
