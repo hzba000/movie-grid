@@ -13,6 +13,7 @@
 <ul>
   <li> Clone repo to a local directory </li>
   <li> Open a terminal and navigate to the repo </li>
+  <li> Type 'npm install' to get dependencies </li>
   <li> Open the project folder in a code editor</li>
   <li> Get an API key from <a href="http://api.themoviedb.org">API Source</a>
   <li> Add a .env file to the root directory and supply it with "API_KEY=YOUR_KEY" </li>
