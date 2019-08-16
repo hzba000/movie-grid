@@ -17,12 +17,14 @@
 </ul>
 
 <h2> Objectives </h2>
-Allow a user to be able to search for a movie given a search string 
-Manage the storage and retrieving of data using Redux 
-Display results in a grid format 
-Create production quality code 
-Return a link to a repo of code 
-BONUS POINTS - Make the UI more attractive
+<ul>
+  <li>Allow a user to be able to search for a movie given a search string</li> 
+  <li>Manage the storage and retrieving of data using Redux</li>  
+  <li>Display results in a grid format</li>  
+  <li>Create production quality code</li>  
+  <li>Return a link to a repo of code</li>  
+  <li>BONUS POINTS - Make the UI more attractive</li> 
+</ul>
 
 <h2> Original MVP </h2>
 <img src="./screenshots/original_mvp.png" />
