@@ -2,8 +2,7 @@ import React from 'react';
 
 import {connect} from 'react-redux';
 import MagGlass from './images/magnifying_glass.png'
-import Guide from './Guide' 
-import {setName} from './actions'
+
 
 import './SearchBar.css';
 
@@ -39,7 +38,7 @@ export class SearchBar extends React.Component{
     render(){
             return(
                 <div className="flex-search-holder">
-                    <div className="welcome-holder"> Movie Time</div>
+                    <div className="welcome-holder"> {this.props.name}</div>
                     <div className="search-holder">
                         <form className="search-form" action="#" onSubmit={this.onSubmitNewQuery}>
                             <label htmlFor="newQueryForm"></label>
@@ -47,16 +46,15 @@ export class SearchBar extends React.Component{
                             <input type="text" name="newQueryForm" id="newQueryForm" placeholder={this.props.query} ref={input => this.query = input}/>
                         </form>  
                     </div>
-                </div>
-       
-                    
+                </div>    
             );   
     };
 };
 
 const mapStateToProps = state => ({
     query:state.query,
-    data: state.data
+    data: state.data,
+    name: state.name
 });
 
 export default connect(mapStateToProps)(SearchBar);

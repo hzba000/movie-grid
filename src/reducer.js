@@ -7,6 +7,7 @@ const initialState = {
     test: null,
     query: "Why not try 'ninja'?",
     data: null,
+    name: "Really lame Title"
 };
 
 export default(state=initialState, action) => {

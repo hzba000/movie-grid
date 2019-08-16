@@ -34,7 +34,7 @@
     cursor:pointer;
 }
 
-input[type=text] {
+.search-form input[type=text] {
     background: transparent;
     border: none;
     padding: 2px 5px;
