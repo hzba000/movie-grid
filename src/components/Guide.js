@@ -10,14 +10,9 @@ export class Guide extends React.Component{
             super(props)
             this.state={}
             this.setName = this.setName.bind(this);
-            this.hideGuide = this.hideGuide.bind(this);
         }
         setName(newName){
             this.props.dispatch(setName(newName));
-        }
-
-        hideGuide(){
-            this.setState({showguide:false})
         }
 
         render(){
