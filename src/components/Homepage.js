@@ -9,36 +9,30 @@ import Guide from './Guide'
 
 import './Homepage.css';
 
-export class Homepage extends React.Component{
-    constructor(props){
-        super(props)
-        this.state={
-        }
-    }
+export function Homepage(props){
 
-    render(){
-        if(this.props.data===null){
+        if(props.data===null){
             return(
                 <div className="homepage-base">
                     <div>
-                    <SearchBar storeQuery={this.props.storeQuery}/>
+                    <SearchBar storeQuery={props.storeQuery}/>
                     <Results />
                     <Guide />
                     </div>
                 </div>
             ); 
         }
-        return(
-            <div className="homepage-base">
-                <div>
-                <SearchBar storeQuery={this.props.storeQuery}/>
-                <Results />
-                </div>
-            </div>
-        );
-    }
 
-    
+        else{
+            return(
+                <div className="homepage-base">
+                    <div>
+                    <SearchBar storeQuery={props.storeQuery}/>
+                    <Results />
+                    </div>
+                </div>
+            );
+        } 
 };
 
 const mapStateToProps = state => ({

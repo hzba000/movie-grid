@@ -35,19 +35,22 @@ export class Main extends React.Component{
             }
         })
         .then(myJson=>{
-        //reset our data for each search
-        let dataArray = []
-          dataArray.length = 0;
-          if(myJson.results === undefined){
-              //do nothing
-          }
-          else{
-            for(let i=0; i<myJson.results.length; i++){
-                dataArray.push({"title":myJson.results[i].title||"Title not available","overview":myJson.results[i].overview||"Summary not available","releasedate":myJson.results[i].release_date||"Date not available", "backdrop":myJson.results[i].backdrop_path, "poster":myJson.results[i].poster_path})
-              }
-            //   console.log(dataArray);
-              this.props.dispatch(storeData(dataArray))
-          }
+            //reset our data for each search
+            let dataArray = []
+            dataArray.length = 0;
+            if(myJson.results === undefined){
+                //do nothing
+            }
+            else{
+                for(let i=0; i<myJson.results.length; i++){
+                    dataArray.push({"title":myJson.results[i].title||"Title not available",
+                                    "overview":myJson.results[i].overview||"Summary not available",
+                                    "releasedate":myJson.results[i].release_date||"Date not available", 
+                                    "backdrop":myJson.results[i].backdrop_path, 
+                                    "poster":myJson.results[i].poster_path})
+                }
+                this.props.dispatch(storeData(dataArray))
+            }
         })
     }
     
@@ -56,7 +59,6 @@ export class Main extends React.Component{
     }
 }
 
-// Main.defaultProps = {data:[]}
 const mapStateToProps = state => ({
     test: state.test,
     query: state.query,

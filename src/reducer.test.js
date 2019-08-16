@@ -3,8 +3,6 @@ import reducer from './reducer';
 import {
     storeQuery,
     storeData,
-
-
 } from './actions'
 
 const initialState = {

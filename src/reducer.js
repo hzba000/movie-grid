@@ -14,9 +14,8 @@ export default(state=initialState, action) => {
     if (action.type === TEST) {
         return Object.assign({}, state, {
             test: action.test
-    });
-
-}
+        });
+    }
 
     if (action.type === STORE_QUERY){
         return Object.assign({}, state, {

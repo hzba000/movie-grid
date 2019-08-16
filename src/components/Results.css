@@ -1,11 +1,8 @@
-
-
 .flex-row{
     display:flex;
     flex-direction:row;
     align-items:center;
     justify-content:space-evenly;
-    /* margin-bottom:25px; */
     flex-wrap:wrap;
     border-bottom: 10px black solid;
     padding:20px;
@@ -22,7 +19,10 @@
 }
 .summary-box{
     width:600px;
-    /* margin-top:20px; */
+}
+
+.title-box{
+    width:200px;
 }
 
 .title-box, .summary-box, .date-box{
@@ -46,10 +46,6 @@
     border-color:inherit;
 }
 
-.title-box{
-    width:200px;
-}
-
 #nothing-found-text{
     color:white;
 }
@@ -65,10 +61,10 @@
     .summary-box{
         width:100%;
     }
-  }
+}
 
 
-  @keyframes slide-up {
+@keyframes slide-up {
     0% {
         opacity: 0;
         transform: translateY(20px);
@@ -77,6 +73,6 @@
         opacity: 1;
         transform: translateY(0);
     }
-  }
+}
 
   

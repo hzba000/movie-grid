@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {shallow, mount, configure} from 'enzyme';
+import {shallow, configure} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import {SearchBar} from './SearchBar';
@@ -24,5 +24,4 @@ describe('<SearchBar />', () => {
         //     const wrapper = mount(<SearchBar />)
         //     expect(wrapper.defaultProps.storeQuery).toBeDefined();
         // })
-
-    });
+});

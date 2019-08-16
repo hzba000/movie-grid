@@ -6,14 +6,10 @@ import MagGlass from './images/magnifying_glass.png'
 import {setName} from '../actions'
 import './SearchBar.css';
 
-
-
 export class SearchBar extends React.Component{
     constructor(props){
         super(props)
-        this.state={
-            // query: null,
-        };
+        this.state={};
         this.onSubmitNewQuery = this.onSubmitNewQuery.bind(this);
         this.scrollTop = this.scrollTop.bind(this);
         this.setName=this.setName.bind(this);
@@ -23,7 +19,6 @@ export class SearchBar extends React.Component{
         event.preventDefault();
         let newQuery = this.query.value;
         this.query.value = '';
-        // this.setState({query:newQuery});
         this.props.storeQuery(newQuery)
         this.scrollTop();
     };
@@ -33,7 +28,7 @@ export class SearchBar extends React.Component{
             top: 0,
             left: 0,
             behavior: 'smooth'
-          });
+        });
     }
 
     setName(){
@@ -41,7 +36,6 @@ export class SearchBar extends React.Component{
         if(newName !== null && newName !== undefined && newName !==""){
             this.props.dispatch(setName(newName));
         }
-
     }
 
     render(){
