@@ -1,5 +1,8 @@
 <h1> The Movie Grid </h1>
 
+<h2> Summary </h2>
+<p>Search for movie titles, release dates and summaries</p>
+
 <h2> Live link </h2>
 <a href="https://hzba000.github.io/movie-grid/"> Live link </a>
 
