@@ -1,7 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {setName} from '../actions'
-import Camera from './images/camera.png'
 import Ticket from './images/ticket.png'
 
 import './Guide.css';
