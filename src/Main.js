@@ -12,7 +12,9 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 export class Main extends React.Component{
     constructor(props){
         super(props);
-        this.state = {};
+        this.state = {
+            apiworking: true,
+        };
         this.storeQuery = this.storeQuery.bind(this);
         this.getMovieData = this.getMovieData.bind(this);
     }
@@ -31,6 +33,7 @@ export class Main extends React.Component{
                 return response.json();
             }
             else{
+                this.setState({apiworking:false})
                 return Error;
             }
         })
@@ -55,7 +58,12 @@ export class Main extends React.Component{
     }
     
     render(){
-        return <Homepage storeQuery={this.storeQuery}/>
+        if(this.state.apiworking === false){
+            return <p id="nothing-found-text">Doesn't look like the API is sending a response, sorry! </p>
+        }
+        else{
+            return <Homepage storeQuery={this.storeQuery}/>
+        }
     }
 }
 
