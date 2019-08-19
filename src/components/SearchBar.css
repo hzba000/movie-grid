@@ -24,7 +24,7 @@
 }
 
 .welcome-holder{
-    margin-left:10px;
+    /* margin-left:10px; */
     margin-right: 10px;
     cursor:pointer;
 }
@@ -48,6 +48,9 @@
     width:20px;
 }
 
+#newQueryForm{
+    width:220px;
+}
 
 @keyframes slide-up {
     0% {
