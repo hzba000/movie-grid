@@ -21,7 +21,7 @@ export class Guide extends React.Component{
                     <div className="landing-image-holder" alt="landing"></div>
                         <div className="landing-information">
                             <h2>{this.props.name} </h2>
-                            <img class="guide-image" src={Ticket} alt="ticket" />
+                            <img className="guide-image" src={Ticket} alt="ticket" />
                             <h3> Search for movies, release dates and summaries </h3>
                         </div>
                     </div>
