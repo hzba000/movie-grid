@@ -25,7 +25,7 @@ export const setName = (newName) => ({
 export const CHECK_API = 'CHECK_API';
 export const checkApi = (boolean) => ({
     type: CHECK_API,
-    name: boolean
+    apiworking: boolean
 })
 
 

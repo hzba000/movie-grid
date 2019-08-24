@@ -11,6 +11,10 @@ export function Results(props){
            )
         }
 
+        if(props.apiworking === false){
+            return(<div id="nothing-found-text">Sorry, the data source is currently down. Try again later!</div>)
+        }
+
         if(props.data.length >= 1){
             let formatData = props.data.map((entry, index)=>{
                 return <div className="flex-row" 

@@ -10,6 +10,14 @@ import Guide from './Guide'
 import './Homepage.css';
 
 export function Homepage(props){
+        if(props.apiworking === false){
+            return(
+                <div>
+                    <SearchBar storeQuery={props.storeQuery}/>
+                    <Results />
+                </div>
+            )
+        }
 
         if(props.data===null){
             return(
@@ -37,7 +45,8 @@ export function Homepage(props){
 
 const mapStateToProps = state => ({
     query: state.query,
-    data: state.data
+    data: state.data,
+    apiworking: state.apiworking
 });
 
 export default connect(mapStateToProps)(Homepage);

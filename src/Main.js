@@ -5,6 +5,7 @@ import Homepage from './components/Homepage'
 
 import {storeQuery} from './actions'
 import {storeData} from './actions'
+import {checkApi} from './actions'
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -55,6 +56,10 @@ export class Main extends React.Component{
                 this.props.dispatch(storeData(dataArray))
             }
         })
+        .catch(()=> {
+            console.log("API not working, sorry boss!");
+            this.props.dispatch(checkApi(false))
+        })
     }
     
     render(){
@@ -70,7 +75,8 @@ export class Main extends React.Component{
 const mapStateToProps = state => ({
     test: state.test,
     query: state.query,
-    data: state.data
+    data: state.data,
+    apiworking: state.apiworking,
 });
 
 export default connect(mapStateToProps)(Main); 
