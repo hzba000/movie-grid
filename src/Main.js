@@ -64,7 +64,12 @@ export class Main extends React.Component{
     
     render(){
         if(this.state.apiworking === false){
-            return <p id="nothing-found-text">Doesn't look like the API is sending a response, sorry! </p>
+            return(
+                <div>
+                <Homepage storeQuery={this.storeQuery}/>
+                <p id="nothing-found-text">Doesn't look like the API is sending a response, sorry! </p>
+                </div>
+            ) 
         }
         else{
             return <Homepage storeQuery={this.storeQuery}/>
